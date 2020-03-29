@@ -1,0 +1,17 @@
+doctype html
+html
+    head
+        title= title
+        link(rel='stylesheet', href='/stylesheets/style.css')
+
+    body
+        header
+            h1= title
+            h2= subtitle
+            nav
+                p Maps of COVIT-19 Patients in India <a href="active" title="Active Patients">Active Patients</a> | <a href="recovered" title="Recovered Patients">Recovered Patients</a> | <a href="deceased" title="Deceased Patients">Deceased Patients</a> | <a href="all" title="All Patients">All Patients</a>
+        #map_canvas
+        script(src='http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js')
+        script(src='https://maps.googleapis.com/maps/api/js?&sensor=false')
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/markerclustererplus/2.1.4/markerclusterer.min.js')
+        block content
