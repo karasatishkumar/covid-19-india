@@ -1,17 +1,8 @@
 {
-  "name": "nodejs-googlemaps-example",
+  "name": "covid-19-india",
   "version": "1.0.0",
-  "description": "A simple example of a Node.js/GoogleMap webapp",
   "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/michaelck/nodejs-googlemaps-example.git"
-  },
-  "author": "MichaelCK",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/michaelck/nodejs-googlemaps-example/issues"
-  },
+  "author": "karasatishkumar@gmail.com",
   "dependencies": {
     "express": ">=4.13",
     "jade": "1.11.0"
@@ -21,8 +12,6 @@
     "gh-pages": "^2.2.0"
   },
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "start": "node index.js"
   }
 }

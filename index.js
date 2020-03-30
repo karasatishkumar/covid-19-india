@@ -5,6 +5,7 @@ var express = require('express'),
     recovered = require('./routes/recovered');
     deceased = require('./routes/deceased'),
     all = require('./routes/all');
+    hotspot = require('./routes/hotspot');
 
 var app = new express();
 
@@ -16,6 +17,7 @@ app.use('/active', active);
 app.use('/recovered', recovered);
 app.use('/deceased', deceased);
 app.use('/all', all);
+app.use('/hotspot', hotspot);
 
 app.get('/',function(req,res){
   res.render('active', { title: 'Locate COVID-19 Patients in India', subtitle: 'with the help of open APIs' });
