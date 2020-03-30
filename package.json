@@ -8,9 +8,6 @@
     "jade": "1.11.0"
   },
   "homepage": "https://github.com/karasatishkumar/covid-19-india",
-  "devDependencies": {
-    "gh-pages": "^2.2.0"
-  },
   "scripts": {
     "start": "node index.js"
   }
