@@ -8,11 +8,14 @@ MAPAPP.cordinates = {};
 MAPAPP.labels  = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
 $(document).ready(function() {
-    initialize();
-    populateMarkers(MAPAPP.rawData);
+    $.ajaxSetup({
+        async: false
+    });
     $.getJSON("../data/loc.json", function(data) {
         MAPAPP.cordinates = data;
     });
+    initialize();
+    populateMarkers(MAPAPP.rawData);
 });
 
 //Initialize our Google Map

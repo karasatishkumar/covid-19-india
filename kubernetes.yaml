@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: covid-19-india
+  name: covid-19-india
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: covid-19-india
+  template:
+    metadata:
+      labels:
+        app: covid-19-india
+    spec:
+      containers:
+      - image: karasatishkumar/covid-19-india:v1
+        name: covid-19-india
+        imagePullPolicy: Always
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: covid-19-india-service
+spec:
+  selector:
+    app: covid-19-india
+  ports:
+    - port: 80
+      targetPort: 3000
+  externalTrafficPolicy: Local
+  type: LoadBalancer
+
