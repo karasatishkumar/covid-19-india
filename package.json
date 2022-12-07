@@ -4,7 +4,7 @@
   "main": "index.js",
   "author": "karasatishkumar@gmail.com",
   "dependencies": {
-    "express": ">=4.13",
+    "express": ">=4.18",
     "jade": "1.11.0"
   },
   "homepage": "https://github.com/karasatishkumar/covid-19-india",
